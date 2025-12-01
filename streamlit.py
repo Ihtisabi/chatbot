@@ -94,7 +94,7 @@ def initialize_chatbot():
     genai.configure(api_key=GOOGLE_API_KEY)
 
     # === 2. Baca data dari PDF ===
-    PDF_FILE = "Buku-Panduan-_-Penggunaan-Generative-AI-pada-Pembelajaran-di-Perguruan-Tinggi-cetak.pdf"
+    PDF_FILE = "Buku-Panduan-_-Penggunaan-Generative-AI-pada-Pembelajaran-di-Perguruan-Tinggi-cetak_compressed.pdf"
 
     pdf_text = extract_text_from_pdf(PDF_FILE)
 
@@ -248,4 +248,5 @@ def main():
                 st.error(f"❌ Error: {e}")
 
 if __name__ == "__main__":
+
     main()
