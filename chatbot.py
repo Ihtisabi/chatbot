@@ -152,9 +152,11 @@ while True:
         response = chatbot.invoke({"question": query})
         # Bersihkan Markdown formatting
         answer = response['answer']
+        answer = re.sub(r'^[\*\-\+]\s+', '• ', answer, flags=re.MULTILINE)
+
         answer = re.sub(r'\*\*(.+?)\*\*', r'\1', answer)  # Hapus bold **text**
-        answer = re.sub(r'\*(.+?)\*', r'\1', answer)      # Hapus italic *text*
-        answer = re.sub(r'^[\*\-\+]\s+', '• ', answer, flags=re.MULTILINE)  # Ganti * dengan •
+        answer = re.sub(r'(?<!^)(?<!\n)\*([^\*\n]+?)\*', r'\1', answer, flags=re.MULTILINE)      # Hapus italic *text*
+        answer = re.sub(r'\n•', '<br>•', answer)
         
         print(f"\n🤖 Chatbot: {answer}\n")
 
@@ -162,3 +164,4 @@ while True:
     except Exception as e:
 
         print(f"❌ Error: {e}\n")
+
