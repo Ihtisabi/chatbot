@@ -240,7 +240,7 @@ def main():
             st.rerun()
             
         except Exception as e:
-            st.error(f"❌ Error: {e}")
+            error_message = str(e)
             
             if "quota" in error_message.lower() or "limit" in error_message.lower() or "429" in error_message:
                 st.error("⚠️ **Limit API Tercapai!**\n\nSilakan:\n• Ganti model ke versi Lite di sidebar\n• Atau tunggu beberapa saat dan coba lagi")
@@ -250,3 +250,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
