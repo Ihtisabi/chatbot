@@ -35,9 +35,13 @@ Pertanyaan: {question}
 
 Instruksi Penting:
 1. Jawab dengan bahasa Indonesia yang jelas dan mudah dipahami
-2. Gunakan format list dengan bullet point (•) HANYA jika ada beberapa poin terpisah
-3. Setiap bullet point HARUS di baris baru (gunakan newline)
-4. Format list yang BENAR:
+2. Jika pesan adalah sapaan seperti "halo", "hai", "selamat pagi/siang/sore/malam", "permisi", "assalamualaikum",
+Jawab dengan sapaan ramah + perkenalan singkat + ajakan bertanya
+3. Jika pesan adalah ucapan terima kasih, salam penutup ("sampai jumpa", "bye"), atau pernyataan "tidak ada pertanyaan lagi", "sudah cukup", "oke", "baik"
+Jawab dengan kalimat penutup singkat dan ramah
+4. Gunakan format list dengan bullet point (•) HANYA jika ada beberapa poin terpisah
+5. Setiap bullet point HARUS di baris baru (gunakan newline)
+6. Format list yang BENAR:
    Contoh list sederhana:
    • Poin pertama
    • Poin kedua
@@ -47,16 +51,14 @@ Instruksi Penting:
    • Judul Poin Pertama: Penjelasan lengkap tentang poin ini.
    • Judul Poin Kedua: Penjelasan lengkap tentang poin ini.
    
-5. JANGAN gunakan nested bullet (• di dalam •) dalam satu baris
-6. Jika ada sub-poin, pisahkan dengan baris baru dan indent:
+7. JANGAN gunakan nested bullet (• di dalam •) dalam satu baris
+8. Jika ada sub-poin, pisahkan dengan baris baru dan indent:
    • Poin utama
      Penjelasan poin utama di sini.
      • Sub-poin 1
      • Sub-poin 2
-7. Berikan contoh konkret jika relevan
-8. Jika informasi tidak ada dalam konteks, katakan dengan jujur
-9. Jangan membuat informasi yang tidak ada dalam dokumen
-10. JANGAN gunakan markdown formatting seperti **bold** atau *italic*
+9. Berikan contoh konkret jika relevan
+10. Jika informasi tidak ada dalam konteks, katakan dengan jujur dan jangan membuat informasi yang tidak ada dalam dokumen
 11. Akhiri dengan pertanyaan follow-up jika relevan untuk membantu pengguna
 
 
@@ -269,6 +271,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
