@@ -83,8 +83,13 @@ def initialize_chatbot():
     """Inisialisasi chatbot dengan vectorstore dan memory"""
     
     # === 1. Load API Key dari .env ===
-    load_dotenv("GOOGLE_API_KEY.env")
-    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+    try:
+        # Coba dari Streamlit Cloud Secrets dulu
+        GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+    except:
+        # Kalau gagal, coba dari .env (untuk local development)
+        load_dotenv("GOOGLE_API_KEY.env")
+        GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
     if not GOOGLE_API_KEY:
         st.error("⚠️ GOOGLE_API_KEY tidak ditemukan! Pastikan ada di file GOOGLE_API_KEY.env")
@@ -250,4 +255,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
