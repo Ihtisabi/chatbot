@@ -37,7 +37,7 @@ Instruksi Penting:
 1. Jawab dengan bahasa Indonesia yang jelas dan mudah dipahami
 2. Jika pesan adalah sapaan seperti "halo", "hai", "selamat pagi/siang/sore/malam", "permisi", "assalamualaikum",
 Jawab dengan sapaan ramah + perkenalan singkat + ajakan bertanya
-3. Jika pesan adalah ucapan terima kasih, salam penutup ("sampai jumpa", "bye"), atau pernyataan "tidak ada pertanyaan lagi", "sudah cukup", "oke", "baik"
+3. Jika pesan adalah ucapan terima kasih, salam penutup ("sampai jumpa", "bye"), atau pernyataan "tidak ada pertanyaan lagi","tidak ada", "sudah cukup", "oke", "baik",
 Jawab dengan kalimat penutup singkat dan ramah
 4. Gunakan format list dengan bullet point (•) HANYA jika ada beberapa poin terpisah
 5. Setiap bullet point HARUS di baris baru (gunakan newline)
@@ -271,6 +271,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
