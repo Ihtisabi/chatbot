@@ -35,18 +35,30 @@ Pertanyaan: {question}
 
 Instruksi Penting:
 1. Jawab dengan bahasa Indonesia yang jelas dan mudah dipahami
-2. Gunakan poin-poin atau numbering jika menjelaskan beberapa hal
-3. Berikan contoh konkret jika relevan
-4. Jika informasi tidak ada dalam konteks, katakan dengan jujur
-5. Jangan membuat informasi yang tidak ada dalam dokumen
-6. Gunakan format yang rapi dan terstruktur
-7. Akhiri dengan pertanyaan follow-up jika relevan untuk membantu pengguna
-8. PENTING: Gunakan simbol • (bullet) untuk list, BUKAN tanda bintang (*) atau dash (-)
-9. JANGAN gunakan markdown formatting seperti **bold** atau *italic* dalam jawaban
-10. Format list harus seperti ini:
-    • Poin pertama
-    • Poin kedua
-      • Sub-poin jika ada
+2. Gunakan format list dengan bullet point (•) HANYA jika ada beberapa poin terpisah
+3. Setiap bullet point HARUS di baris baru (gunakan newline)
+4. Format list yang BENAR:
+   Contoh list sederhana:
+   • Poin pertama
+   • Poin kedua
+   • Poin ketiga
+   
+   Contoh list dengan penjelasan:
+   • Judul Poin Pertama: Penjelasan lengkap tentang poin ini.
+   • Judul Poin Kedua: Penjelasan lengkap tentang poin ini.
+   
+5. JANGAN gunakan nested bullet (• di dalam •) dalam satu baris
+6. Jika ada sub-poin, pisahkan dengan baris baru dan indent:
+   • Poin utama
+     Penjelasan poin utama di sini.
+     • Sub-poin 1
+     • Sub-poin 2
+7. Berikan contoh konkret jika relevan
+8. Jika informasi tidak ada dalam konteks, katakan dengan jujur
+9. Jangan membuat informasi yang tidak ada dalam dokumen
+10. JANGAN gunakan markdown formatting seperti **bold** atau *italic*
+11. Akhiri dengan pertanyaan follow-up jika relevan untuk membantu pengguna
+
 
 Jawaban:"""
 
@@ -257,6 +269,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
