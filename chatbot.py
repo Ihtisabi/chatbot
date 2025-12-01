@@ -73,7 +73,7 @@ def clean_text(text):
     return text
 
 # Path ke file PDF Anda
-PDF_FILE = "Buku-Panduan-_-Penggunaan-Generative-AI-pada-Pembelajaran-di-Perguruan-Tinggi-cetak.pdf"
+PDF_FILE = "Buku-Panduan-_-Penggunaan-Generative-AI-pada-Pembelajaran-di-Perguruan-Tinggi-cetak_compressed.pdf"
 
 pdf_text = extract_text_from_pdf(PDF_FILE)
 
@@ -160,4 +160,5 @@ while True:
 
         
     except Exception as e:
+
         print(f"❌ Error: {e}\n")
